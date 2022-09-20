@@ -1,0 +1,33 @@
+{
+  "name": "weather_cli_nodejs",
+  "version": "1.0.0",
+  "description": "node app",
+  "main": "weather.js",
+  "bin": {
+    "weather": "weather.js###"
+  },
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaxYashch/WEATHER_CLI_NODEJS.git"
+  },
+  "keywords": [
+    "NodeJS",
+    "CLI",
+    "weather"
+  ],
+  "author": "Max Yashch",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MaxYashch/WEATHER_CLI_NODEJS/issues"
+  },
+  "homepage": "https://github.com/MaxYashch/WEATHER_CLI_NODEJS#readme",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "chalk": "^5.0.1",
+    "dedent-js": "^1.0.1"
+  }
+}
