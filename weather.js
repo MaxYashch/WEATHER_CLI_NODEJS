@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 import { getArgs } from './helpers/args.js';
-import { printHelp, printSuccess, printError } from './services/log_service.js';
-import { saveKeyValue, TOKEN_DICTIONARY } from './services/storage_service.js';
+import { getWeather } from './services/api_service.js';
+import { printHelp, printSuccess, printError, printWeather } from './services/log_service.js';
+import { saveKeyValue, TOKEN_DICTIONARY, getKeyValue } from './services/storage_service.js';
 
 const saveToken = async (token) => {
     if (!token.length) {
@@ -18,16 +19,16 @@ const saveToken = async (token) => {
 
 const initCLI = () => {
     const args = getArgs(process.argv);
-    console.log(args);
     if (args.h) {
         printHelp();
     }
-    // if (args.s) {
-    //     // save city
-    // }
+    if (args.s) {
+        saveCity(args.s);
+    }
     if (args.t) {
         saveToken(args.t);
     }
+    return getForecast();
 }
 
 initCLI();
