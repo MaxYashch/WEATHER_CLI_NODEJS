@@ -5,7 +5,7 @@ export const printError = (error) => {
 }
 
 export const printSuccess = (msg) => {
-    console.log(chalk.green(' ERROR ') + ' ' + msg);    
+    console.log(chalk.green(' SUCCESS ') + ' ' + msg);    
 }
 
 export const printHelp = () => {
